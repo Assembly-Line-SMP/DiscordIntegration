@@ -200,6 +200,11 @@ public class ServerInterface implements McServerInterface {
         }
     }
 
+    @Override
+    public boolean isPlayerVanish(UUID player) {
+        return false;
+    }
+
     @ExpectPlatform
     private static boolean playerHasPermissionsX(Player player, String... permissions) {
         throw new AssertionError();
