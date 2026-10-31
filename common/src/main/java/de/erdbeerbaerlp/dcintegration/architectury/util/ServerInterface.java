@@ -166,7 +166,8 @@ public class ServerInterface implements McServerInterface {
 
     @Override
     public boolean isOnlineMode() {
-        return Configuration.instance().bungee.isBehindBungee || server.usesAuthentication();
+        // Simpler fix instead of forking the DiscordIntegration core
+        return true;
     }
 
     @Override
