@@ -40,10 +40,6 @@ public final class DiscordIntegrationForge {
     @SubscribeEvent
     public void serverStarting(final ServerStartingEvent ev) {
         DiscordIntegrationMod.serverStarting(ev.getServer());
-
-        if (ModList.get().getModContainerById("dynmap").isPresent()) {
-            new DynmapListener().register();
-        }
     }
     @SubscribeEvent
     public void serverStarted(final ServerStartedEvent ev) {
